@@ -6,8 +6,7 @@
 */
 
 function sumArray(numbers) {
-  let sum = numbers.reduce((prev, curr) => prev + curr, 0);
-  return sum;
+  return numbers.reduce((prev, curr) => prev + curr, 0);
 }
 
 // Використання функції
@@ -91,20 +90,18 @@ console.log(skillsManager.getAllSkills())
 
 function DateCalculator(initialDate) {
 
-  let date = new Date(initialDate);
+  this.date = new Date(initialDate);
 
   this.addDays = function (days) {
-    date.setDate(date.getDate() + days);    
-    return date;
+    this.date.setDate(this.date.getDate() + days);    
   }
 
   this.subtractDays = function (days) {
-    date.setDate(date.getDate() - days);
-    return date;
+    this.date.setDate(this.date.getDate() - days);
   }
 
   this.getResult = function () {    
-    return date.toISOString().split('T')[0];;
+    return this.date.toISOString().split('T')[0];
   }
 }
 
